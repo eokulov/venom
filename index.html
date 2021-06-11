@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,22 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class= "blood">
+
+<body class="blood">
   <div class="container">
     <header class="header">
       <a href="/" class="logo-link">
         <img width="46" height="71" src="image/logo.png" alt="logo: Venom" class="logo-image">
       </a>
       <nav class="nav">
+        <button class="menu-button">
+          <span class="menu-button-text">меню</span>
+          <img src="image/menu.svg" alt="icon: burger-menu" class="menu-button-icon">
+        </button>
+        <button class="menu-close">
+          <span class="menu-close-text">закрыть</span>
+          <img src="image/arrow.svg" alt="icon: arrow-menu" class="menu-close-icon">
+        </button>
         <ul class="nav-menu">
           <li class="nav-menu-item">
             <a href="about.html" class="nav-menu-link">о фильме</a>
@@ -38,15 +48,16 @@
         <span class="date">16 сентября 2021</span>
         <img src="image/venom-2.svg" alt="logo: venom-2" class="film-logo">
         <p class="film-discription">
-          В настырном журналисте по-прежнему живет симбиот. Том Харди в образе обаятельного суперзлодея из комиксов Marvel.
+          В настырном журналисте по-прежнему живет симбиот. Том Харди в образе обаятельного суперзлодея из комиксов
+          Marvel.
         </p>
       </div>
       <!-- /.film-text -->
       <div class="button-group">
-        <button class="button button-primary">
+        <a data-fancybox href="https://www.youtube.com/watch?v=BwkjycpOk34" class="button button-primary">
           <img width="15" src="image/play.svg" alt="icon: play" class="button-icon">
           <span class="button-text">смотреть трейлер</span>
-        </button>
+        </a>
         <a href="Trailer.html" class="button button-link">
           <img width="15" src="image/ticket.svg" alt="icon: ticket" class="button-icon">
           <span class="button-text">билеты на премьеру</span>
@@ -57,5 +68,11 @@
   </div>
   <!-- /.container -->
   <img src="image/venom.png" alt="photo: venom" class="venom">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+  <script src='js/main.js'></script>
 </body>
+
 </html>

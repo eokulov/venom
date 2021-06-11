@@ -6,6 +6,9 @@ body {
   max-width: 1140px;
   margin: auto;
 }
+img {
+  max-width: 100%;
+}
 .header {
   display: flex;
   align-items: center;
@@ -45,6 +48,9 @@ body {
   line-height: 140%;
   color: rgba(255, 255, 255, 0.8);
 }
+.film-logo {
+  width: 70%;
+}
 .button {
   padding: 15px 30px;
   border: none;
@@ -70,15 +76,17 @@ body {
   color: #fff;
 }
 .button-group {
-  margin-top: 70px;
+  margin-top: 5%;
 }
 .venom {
   position: absolute;
   top: 0;
   right: 0;
+  max-width: 728px;
+  width: 50%;
 }
 .blood {
-  background: url("../image/blood.png") no-repeat top right,
+  background: url("../image/blood.png") no-repeat top right/ 70%,
     #14131a url("../image/background.jpg") no-repeat center center / 100%;
 }
 .primary-bg {
@@ -144,6 +152,7 @@ body {
   margin-top: 33px;
 }
 .trailer .play {
+  background-color: #fff;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -151,7 +160,7 @@ body {
   cursor: pointer;
 }
 .trailer .play-icon {
-  transform: translate(1px, 2px);
+  transform: translate(15px, 14px);
 }
 .poster-wrappers {
   display: flex;
@@ -168,4 +177,130 @@ body {
 .poster-wrappers .list {
   margin: 0;
   margin-bottom: 20px;
+}
+.menu-button {
+  display: none;
+}
+.menu-close {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    padding-bottom: 5%;
+  }
+  .col {
+    margin-bottom: 5%;
+  }
+  .header {
+    margin-bottom: 4%;
+  }
+  .film {
+    margin-top: 20%;
+  }
+  .container {
+    margin-left: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .blood {
+    background: #14131a;
+  }
+  .venom {
+    top: 10%;
+  }
+  .container {
+    margin-left: 5%;
+  }
+}
+@media (max-width: 576px) {
+  .nav-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.2s;
+  }
+  .nav-menu-item {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-right: 0;
+  }
+  .menu-close {
+    position: fixed;
+    opacity: 0;
+    right: 25px;
+    top: 65px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transform: translateX(300%);
+    transition: transform 0.2s;
+    transition-delay: 0.2s;
+  }
+  .is-active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .menu-close-text {
+    margin-right: 10px;
+  }
+  .nav-menu-link {
+    color: #14131a;
+  }
+  .nav {
+    margin-left: auto;
+  }
+  .menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    background-color: #14131a;
+    cursor: pointer;
+    color: #fff;
+  }
+  .menu-button-text {
+    margin-right: 10px;
+  }
+  .button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .film-text {
+    text-align: center;
+  }
+  .poster-wrappers {
+    flex-direction: column;
+  }
+  .content .trailer {
+    max-width: 350px;
+    width: 100%;
+  }
+  .poster {
+    margin-bottom: 4%;
+    margin-right: 0;
+    width: 100%;
+    max-width: 350px;
+  }
+  .colum-2 {
+    column-count: 1;
+  }
+  .container {
+    margin-left: 5%;
+  }
 }

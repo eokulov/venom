@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,22 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class= "primary-bg">
+
+<body class="primary-bg">
   <div class="container">
     <header class="header">
       <a href="/" class="logo-link">
         <img width="46" height="71" src="image/logo.png" alt="logo: Venom" class="logo-image">
       </a>
       <nav class="nav">
+        <button class="menu-button">
+          <span class="menu-button-text">меню</span>
+          <img src="image/menu.svg" alt="icon: burger menu" class="menu-button-icon">
+        </button>
+        <button class="menu-close">
+          <span class="menu-close-text">закрыть</span>
+          <img src="image/arrow.svg" alt="icon: arrow-menu" class="menu-close-icon">
+        </button>
         <ul class="nav-menu">
           <li class="nav-menu-item">
             <a href="about.html" class="nav-menu-link">о фильме</a>
@@ -36,7 +46,8 @@
     <div class="content">
       <div class="col">
         <h2 class="content-title">О фильме</h2>
-        <p class="content-text">В настырном журналисте по-прежнему живет симбиот. Том Харди в образе обаятельного суперзлодея из комиксов Marvel.</p>
+        <p class="content-text">В настырном журналисте по-прежнему живет симбиот. Том Харди в образе обаятельного
+          суперзлодея из комиксов Marvel.</p>
         <h3 class="content-subtitle">В главных ролях</h3>
         <ul class="list colum-2">
           <li class="list-item">Том Харди</li>
@@ -51,14 +62,14 @@
           <li class="list-item">Пегги Лу</li>
         </ul>
         <div class="trailer">
-          <button class="play">
+          <a data-fancybox href="https://www.youtube.com/watch?v=BwkjycpOk34" class="play">
             <img src="image/play.svg" alt="icon: play" class="play-icon">
-          </button>
+          </a>
         </div>
       </div>
       <!-- /.col -->
       <div class="col">
-       <div class="poster-wrappers">
+        <div class="poster-wrappers">
           <img src="image/poster.jpg" alt="photo: poster venom 2" class="poster">
           <div class="creators">
             <h3 class="content-subtitle">Режисер</h3>
@@ -77,12 +88,17 @@
               <li class="list-item">Том Харди</li>
             </ul>
           </div>
-       </div>
+        </div>
         <!-- /.creators -->
       </div>
     </div>
     <!-- /.content -->
   </div>
   <!-- /.container -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src='js/main.js'></script>
 </body>
+
 </html>
